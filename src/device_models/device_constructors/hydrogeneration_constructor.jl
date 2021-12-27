@@ -129,6 +129,7 @@ function PSI.construct_device!(
     # Variables
     PSI.add_variables!(optimization_container, PSI.ActivePowerVariable, devices, D())
     PSI.add_variables!(optimization_container, PSI.ReactivePowerVariable, devices, D())
+    PSI.add_variables!(optimization_container, PSI.OnVariable, devices, D())
 
     # Constraints
     PSI.add_constraints!(
@@ -182,6 +183,7 @@ function PSI.construct_device!(
 
     # Variables
     PSI.add_variables!(optimization_container, PSI.ActivePowerVariable, devices, D())
+    PSI.add_variables!(optimization_container, PSI.OnVariable, devices, D())
 
     # Constraints
     PSI.add_constraints!(
