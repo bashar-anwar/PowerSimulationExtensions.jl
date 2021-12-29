@@ -195,6 +195,12 @@ function PSI.construct_device!(
         S,
         PSI.get_feedforward(model),
     )
+    PSI.commit_hydro_active_power_ub!(
+        optimization_container,
+        devices,
+        model,
+        PSI.get_feedforward(model),
+    )
     energy_contribution_constraint!(
         optimization_container,
         devices,
